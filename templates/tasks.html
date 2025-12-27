@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="/add">Add Task</a>
+<ul>
+{% for task in tasks %}
+    <li>
+        <strong>{{ task.title }}</strong> – {{ task.status }}
+        <br>{{ task.description }}
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
+
